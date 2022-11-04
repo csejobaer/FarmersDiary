@@ -1,0 +1,8 @@
+// Create databse
+create databse farmersdiary;
+//Create farmers table 
+create table farmers(id int PRIMARY KEY, fname varchar(40), lname varchar(40), gender varchar(7), nid int(18), FOREIGN  KEY(address_id) REFERENCES address(address_id), phone int(12), password varchar(40));
+// Create Mediator table
+create table mediators(id int PRIMARY KEY, fname varchar(40), lname varchar(40), gender varchar(7), nid int(18), FOREIGN  KEY(address_id) REFERENCES address(address_id), phone int(12), password varchar(40), trade_license varchar(255));
+// Create Buyers Table
+create table buyer(id int PRIMARY KEY, fname varchar(40), lname varchar(40), gender varchar(7), nid int(18), FOREIGN  KEY(address_id) REFERENCES address(address_id), phone int(12), password varchar(40), trade_license varchar(255));
